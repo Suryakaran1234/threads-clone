@@ -149,10 +149,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ### We used the below youtube videos to learn about the packages and libraries used in this project
 
-1. Simple Next.js & React Authentication With Clerk - [https://www.youtube.com/watch?v=RHFmsoiVtKE] (https://www.youtube.com/watch?v=RHFmsoiVtKE)
+1. Simple Next.js & React Authentication With Clerk - [https://www.youtube.com/watch?v=RHFmsoiVtKE](https://www.youtube.com/watch?v=RHFmsoiVtKE)
 
-2. Shadcn Crash course with Next JS - [https://www.youtube.com/watch?v=O4AjymzpIEg] (https://www.youtube.com/watch?v=O4AjymzpIEg)
+2. Shadcn Crash course with Next JS - [https://www.youtube.com/watch?v=O4AjymzpIEg](https://www.youtube.com/watch?v=O4AjymzpIEg)
 
-3. Using React Hook Form, Zod Validation and Server Actions in NextJs 13 - [https://www.youtube.com/watch?v=R_Pj593TH_Q] (https://www.youtube.com/watch?v=R_Pj593TH_Q)
+3. Using React Hook Form, Zod Validation and Server Actions in NextJs 13 - [https://www.youtube.com/watch?v=R_Pj593TH_Q](https://www.youtube.com/watch?v=R_Pj593TH_Q)
 
-4. Build any layout with tailwind | crash course - [https://www.youtube.com/watch?v=rbSPe1tJowY] (https://www.youtube.com/watch?v=rbSPe1tJowY)
+4. Build any layout with tailwind | crash course - [https://www.youtube.com/watch?v=rbSPe1tJowY](https://www.youtube.com/watch?v=rbSPe1tJowY)
