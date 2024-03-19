@@ -23,11 +23,6 @@
 4. 🤸 [Quick Start](#quick-start)
 5. 🔗 [Resource Links](#links)
 
-
-
-
-<a href="https://youtu.be/O5cmLDVTgAs?feature=shared" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
 ## <a name="introduction">🤖 Introduction</a>
 
 Introducing our latest project, made by our team called TrioTrek. I'm Surya Karan Sharma, leading the team, along with Nish Kamli and Gurtek Singh as our teammates. We worked on this for our final semester in the Web Programming and Framework II Course as a group project.
@@ -51,7 +46,7 @@ What's cool about it? Well, we added some neat stuff. You can reply to comments 
 
 ## <a name="features">🔋 Features</a>
 
-### Tasks completed by Surya Karan Sharma:
+### 🚀 Tasks completed by Surya Karan Sharma:
 
 👉 **Authentication**: Implemented authentication using Clerk for email, password, and social logins (Google and GitHub) with a comprehensive profile management system.
 
@@ -65,7 +60,7 @@ What's cool about it? Well, we added some neat stuff. You can reply to comments 
 
 👉 **Form Management with React Hook Form**: Efficiently managed forms with React Hook Form for a streamlined user input experience.
 
-### Tasks completed by Nish Kamli:
+### 🚀 Tasks completed by Nish Kamli:
 
 👉 **Visually Appealing Home Page**: Created a visually appealing home page showcasing the latest threads for an engaging user experience.
 
@@ -79,7 +74,7 @@ What's cool about it? Well, we added some neat stuff. You can reply to comments 
 
 👉 **Data Validation with Zod**: Ensured data integrity with data validation using Zod.
 
-### Tasks completed by Gurtek Singh:
+### 🚀 Tasks completed by Gurtek Singh:
 
 👉 **Create Thread Page**: Developed a dedicated page for users to create threads, fostering community engagement.
 
