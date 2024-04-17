@@ -20,6 +20,8 @@ import { ChangeEvent, useState } from "react";
 import { Textarea } from "../ui/textarea";
 import { isBase64Image } from "@/lib/utils";
 import { useUploadThing } from "@/lib/uploadthing";
+import { updateUser } from "@/lib/actions/user.actions";
+import { usePathname, useRouter } from "next/navigation";
 
 type Props = {
   user: {
@@ -36,6 +38,8 @@ type Props = {
 const AccountProfile = ({ user, btnTitle }: Props) => {
   const [files, setFiles] = useState<File[]>([]);
   const { startUpload } = useUploadThing("media");
+  const router = useRouter();
+  const pathname = usePathname();
 
   const form = useForm({
     resolver: zodResolver(UserValidation),
@@ -60,13 +64,13 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
 
       setFiles(Array.from(e.target.files));
 
-      if (!file.type.includes('image')) return;
+      if (!file.type.includes("image")) return;
 
       fileReader.onload = async (event) => {
-        const imageDataUrl = event.target?.result?.toString() || '';
+        const imageDataUrl = event.target?.result?.toString() || "";
 
         fieldChange(imageDataUrl);
-      }
+      };
 
       fileReader.readAsDataURL(file);
     }
@@ -80,14 +84,27 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
 
     if (hasImageChanged) {
       const imgRes = await startUpload(files);
-      
+
       if (imgRes && imgRes[0].url) {
         values.profile_photo = imgRes[0].url;
       }
     }
 
     // TODO: Update User Profile
-    
+    await updateUser({
+      username: values.username,
+      bio: values.bio,
+      name: values.name,
+      image: values.profile_photo,
+      userId: user.id,
+      path: pathname,
+    });
+
+    if (pathname === '/profile/edit') {
+      router.back();
+    } else {
+      router.push('/');
+    }
   }
 
   return (
@@ -130,6 +147,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   onChange={(e) => handleImage(e, field.onChange)}
                 />
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
@@ -145,6 +163,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
               <FormControl>
                 <Input type="text" className="account-form_input" {...field} />
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
@@ -160,6 +179,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
               <FormControl>
                 <Input type="text" className="account-form_input" {...field} />
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
@@ -174,6 +194,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
               <FormControl>
                 <Textarea rows={10} className="account-form_input" {...field} />
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
